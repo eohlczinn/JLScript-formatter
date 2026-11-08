@@ -1,0 +1,181 @@
+{
+  "name": "jlscript-formatter",
+  "displayName": "JLScript Formatter",
+  "description": "Formatter multi-linguagem do ecossistema JLScript com preview, range, ignore, config por linguagem e suporte a JLS, JS/TS, Python, C++, HTML/CSS, JSON, Markdown, YAML, XML e SQL.",
+  "version": "3.2.0",
+  "publisher": "JLScripter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eohlczinn/JLScript-formatter.git",
+    "icon": "assets/icon.png",
+    "galleryBanner": {
+      "color": "#11101A",
+      "theme": "dark"
+    },
+    "engines": {
+      "vscode": "^1.85.0"
+    },
+    "categories": [
+      "Formatters",
+      "Programming Languages"
+    ],
+    "keywords": [
+      "jlscript",
+      "jls",
+      "formatter",
+      "format",
+      "javascript",
+      "typescript",
+      "python",
+      "cpp",
+      "html",
+      "css",
+      "json",
+      "markdown",
+      "yaml",
+      "sql"
+    ],
+    "main": "./extension.cjs",
+    "activationEvents": [
+      "onStartupFinished",
+      "onCommand:jlsFormatter.formatDocument",
+      "onCommand:jlsFormatter.formatSelection",
+      "onCommand:jlsFormatter.formatWorkspace",
+      "onCommand:jlsFormatter.preview",
+      "onCommand:jlsFormatter.toggleFormatOnSave",
+      "onCommand:jlsFormatter.createConfig",
+      "onCommand:jlsFormatter.createIgnore"
+    ],
+    "contributes": {
+      "commands": [
+        {
+          "command": "jlsFormatter.formatDocument",
+          "title": "JLScript Formatter: Formatar documento"
+        },
+        {
+          "command": "jlsFormatter.formatSelection",
+          "title": "JLScript Formatter: Formatar seleção"
+        },
+        {
+          "command": "jlsFormatter.formatWorkspace",
+          "title": "JLScript Formatter: Formatar projeto inteiro"
+        },
+        {
+          "command": "jlsFormatter.preview",
+          "title": "JLScript Formatter: Preview antes/depois"
+        },
+        {
+          "command": "jlsFormatter.toggleFormatOnSave",
+          "title": "JLScript Formatter: Ativar/Desativar formatar ao salvar"
+        },
+        {
+          "command": "jlsFormatter.createConfig",
+          "title": "JLScript Formatter: Criar .jlsfmt.json"
+        },
+        {
+          "command": "jlsFormatter.createIgnore",
+          "title": "JLScript Formatter: Criar .jlsfmtignore"
+        }
+      ],
+      "keybindings": [
+        {
+          "command": "jlsFormatter.formatDocument",
+          "key": "ctrl+alt+f",
+          "mac": "cmd+option+f",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "jlsFormatter.formatSelection",
+          "key": "ctrl+k ctrl+j",
+          "mac": "cmd+k cmd+j",
+          "when": "editorTextFocus && editorHasSelection"
+        },
+        {
+          "command": "jlsFormatter.preview",
+          "key": "ctrl+alt+p",
+          "mac": "cmd+option+p",
+          "when": "editorTextFocus"
+        }
+      ],
+      "configuration": {
+        "title": "JLScript Formatter",
+        "properties": {
+          "jlsFormatter.enable": {
+            "type": "boolean",
+            "default": true,
+            "description": "Ativa o JLScript Formatter."
+          },
+          "jlsFormatter.formatOnSave": {
+            "type": "boolean",
+            "default": false,
+            "description": "Formata automaticamente ao salvar."
+          },
+          "jlsFormatter.indentSize": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 16,
+            "default": 0,
+            "description": "Espaços por nível. 0 usa o padrão da linguagem."
+          },
+          "jlsFormatter.useTabs": {
+            "type": "boolean",
+            "default": false
+          },
+          "jlsFormatter.maxBlankLines": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8,
+            "default": 1
+          },
+          "jlsFormatter.finalNewline": {
+            "type": "boolean",
+            "default": true
+          },
+          "jlsFormatter.printWidth": {
+            "type": "integer",
+            "minimum": 40,
+            "maximum": 240,
+            "default": 100,
+            "description": "Largura preferida das linhas."
+          },
+          "jlsFormatter.quotes": {
+            "type": "string",
+            "enum": [
+              "preserve",
+              "single",
+              "double"
+            ],
+            "default": "preserve",
+            "description": "Aspas para JS/JSX/TS/TSX."
+          },
+          "jlsFormatter.semicolons": {
+            "type": "boolean",
+            "default": true,
+            "description": "Mantém ponto e vírgula em JS/TS."
+          },
+          "jlsFormatter.trailingComma": {
+            "type": "string",
+            "enum": [
+              "none",
+              "multiline",
+              "all"
+            ],
+            "default": "none"
+          },
+          "jlsFormatter.bracketSpacing": {
+            "type": "boolean",
+            "default": true
+          },
+          "jlsFormatter.organizeImports": {
+            "type": "boolean",
+            "default": false,
+            "description": "Ordena imports simples no topo do arquivo."
+          },
+          "jlsFormatter.statusBar": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  }
