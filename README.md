@@ -5,10 +5,6 @@
 </p>
 
 <p align="center">
-  <img src="./assets/jlscript-formatter-banner.png" alt="JLScript Formatter" width="100%">
-</p>
-
-<p align="center">
   <img src="./assets/icon.png" width="110" alt="JLScript Formatter Logo">
 </p>
 
