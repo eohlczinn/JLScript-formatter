@@ -1,0 +1,77 @@
+{
+  "editor.formatOnSave": true,
+
+  "jlsFormatter.enable": true,
+  "jlsFormatter.formatOnSave": false,
+  "jlsFormatter.indentSize": 0,
+  "jlsFormatter.useTabs": false,
+  "jlsFormatter.maxBlankLines": 1,
+  "jlsFormatter.finalNewline": true,
+  "jlsFormatter.printWidth": 100,
+  "jlsFormatter.quotes": "preserve",
+  "jlsFormatter.semicolons": true,
+  "jlsFormatter.trailingComma": "none",
+  "jlsFormatter.bracketSpacing": true,
+  "jlsFormatter.organizeImports": false,
+  "jlsFormatter.statusBar": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[python]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[cpp]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[yaml]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[xml]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[sql]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  },
+
+  "[jlscript]": {
+    "editor.defaultFormatter": "JLScripter.jlscript-formatter"
+  }
+}
