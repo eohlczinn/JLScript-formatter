@@ -5,37 +5,64 @@
 </p>
 
 <p align="center">
-  <strong>Um formatter rápido, configurável e multi-linguagem do ecossistema JLScript.</strong>
+  <img src="./assets/jlscript-formatter-banner.png" alt="JLScript Formatter" width="100%">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-3.2.0-7c3aed?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/VS%20Code-1.85%2B-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code">
+  <img src="./assets/icon.png" width="110" alt="JLScript Formatter Logo">
+</p>
+
+<h1 align="center">JLScript Formatter</h1>
+
+<p align="center">
+  <strong>Um formatter rápido, simples e multi-linguagem criado dentro do ecossistema JLScript.</strong>
+</p>
+
+<p align="center">
+  Formate JLScript, JavaScript, TypeScript, C++, Python, JSON, HTML, CSS e outras linguagens sem transformar seu código em uma obra abstrata.
+</p>
+
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=EohLczin.jlscript-formatter">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/EohLczin.jlscript-formatter?style=for-the-badge&label=VS%20Code&color=7c3aed" alt="VS Code Marketplace">
+  </a>
+
+  <a href="https://marketplace.visualstudio.com/items?itemName=EohLczin.jlscript-formatter">
+    <img src="https://img.shields.io/visual-studio-marketplace/i/EohLczin.jlscript-formatter?style=for-the-badge&label=Instala%C3%A7%C3%B5es&color=8b5cf6" alt="Instalações">
+  </a>
+
+  <img src="https://img.shields.io/badge/vers%C3%A3o-3.2.0-BD93F9?style=for-the-badge" alt="Versão">
+
   <img src="https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/JLScript-Formatter-BD93F9?style=for-the-badge" alt="JLScript Formatter">
+</p>
+
+<p align="center">
+  <a href="https://github.com/eohlczinn/JLScript-formatter">GitHub</a>
+  ·
+  <a href="https://marketplace.visualstudio.com/items?itemName=EohLczin.jlscript-formatter">VS Code Marketplace</a>
+  ·
+  <a href="#-atalhos">Atalhos</a>
+  ·
+  <a href="#-configura%C3%A7%C3%A3o">Configuração</a>
+  ·
+  <a href="#-antes-e-depois">Antes e Depois</a>
 </p>
 
 ---
 
-## Sobre
+# ✨ O que é o JLScript Formatter?
 
-**JLScript Formatter** é o formatador oficial do ecossistema JLScript.
+O **JLScript Formatter** nasceu de uma necessidade bem simples:
 
-Ele foi criado para manter o código consistente sem exigir configuração complicada, funcionando tanto pela linha de comando quanto dentro do Visual Studio Code.
+> abrir um arquivo bagunçado, apertar um atalho e continuar programando.
 
-A versão `3.2.0` suporta múltiplas linguagens, configuração por projeto, cache, arquivos ignorados, preview de alterações, formatação de seleção e integração com outros editores por `stdin/stdout`.
+Sem ficar arrumando espaço manualmente.
 
-Uma das regras visuais principais do formatter é simples:
+Sem mover chave pra um lugar que você não gosta.
 
-```js
-function somar(a, b) {
-  return a + b;
-}
-```
+Sem precisar instalar um formatter diferente para cada pequeno projeto.
 
-A chave de abertura permanece na mesma linha da declaração.
-
-O formatter não utiliza este estilo:
+E principalmente sem fazer isso:
 
 ```js
 function somar(a, b)
@@ -44,45 +71,7 @@ function somar(a, b)
 }
 ```
 
----
-
-## Linguagens suportadas
-
-| Linguagem | Extensões |
-| --- | --- |
-| JLScript | `.jls` |
-| JavaScript | `.js` |
-| JSX | `.jsx` |
-| TypeScript | `.ts` |
-| TSX | `.tsx` |
-| Python | `.py` |
-| C++ | `.cpp`, `.cc`, `.cxx` |
-| Headers | `.h`, `.hpp`, `.hh`, `.chh` |
-| HTML | `.html`, `.htm` |
-| CSS | `.css` |
-| JSON | `.json` |
-| JSONC | `.jsonc` |
-| Markdown | `.md`, `.markdown` |
-| YAML | `.yaml`, `.yml` |
-| XML | `.xml` |
-| SQL | `.sql` |
-
----
-
-## Antes e depois
-
-### JavaScript
-
-Antes:
-
-```js
-function somar(a,b)
-{
-return a+b;
-}
-```
-
-Depois:
+Aqui a regra é simples:
 
 ```js
 function somar(a, b) {
@@ -90,156 +79,879 @@ function somar(a, b) {
 }
 ```
 
-### JLScript
+A `{` fica junto da declaração.
 
-Antes:
+Sempre que a linguagem permitir esse estilo, essa é a identidade do formatter.
+
+O projeto começou como um formatter para **JLScript**, mas acabou crescendo.
+
+Hoje ele também consegue trabalhar com várias linguagens usadas no desenvolvimento de projetos reais.
+
+---
+
+# 💜 E o que é JLScript?
+
+**JLScript** é uma linguagem de programação criada para ter uma sintaxe simples, direta e próxima de quem está aprendendo ou construindo projetos sem querer lutar contra a própria linguagem.
+
+Um exemplo pequeno:
 
 ```jls
-func soma(a,b){va resultado=a+b;retorne resultado}
+va nome = "Lucas"
+va idade = 20
+
+func apresentar(nome, idade) {
+    mostrar("Nome: " + nome)
+    mostrar("Idade: " + idade)
+}
+
+se (idade >= 18) {
+    apresentar(nome, idade)
+} senao {
+    mostrar("Menor de idade")
+}
 ```
 
-Depois:
+A ideia da linguagem não é simplesmente traduzir JavaScript para português.
+
+Ela possui seu próprio ecossistema, sintaxe, runtime e ferramentas.
+
+Alguns exemplos:
 
 ```jls
+va nome = "JLScript"
+
 func soma(a, b) {
-    va resultado = a + b;
-    retorne resultado
+    retorne a + b
+}
+
+se (nome == "JLScript") {
+    mostrar("Olá JLScript")
 }
 ```
 
-### C++
+Também existem módulos e ferramentas do ecossistema:
 
-Antes:
-
-```cpp
-if(ativo)
-{
-executar();
-}
+```jls
+import [#ui, #style]
 ```
 
-Depois:
+E uma interface pode seguir uma estrutura declarativa:
+
+```jls
+va app = ui.janela()
+
+app.titulo("Minha aplicação")
+
+app.ui({
+    div(class="container") {
+        h1 = "JLScript"
+        text = "Minha primeira interface"
+
+        button(class="primario") {
+            text = "Continuar"
+        }
+    }
+})
+```
+
+O Formatter foi criado justamente para acompanhar esse ecossistema.
+
+---
+
+# 🚀 Por que criar outro formatter?
+
+Porque eu queria algumas regras específicas.
+
+Uma delas virou praticamente a regra número 1 do projeto:
+
+```text
+A chave de abertura fica na mesma linha.
+```
+
+Então:
 
 ```cpp
-if (ativo) {
+if (usuario.ativo) {
     executar();
 }
 ```
 
-### JSON
+e não:
 
-Antes:
-
-```json
-{"nome":"JLScript","versao":"3.2.0","ativo":true}
-```
-
-Depois:
-
-```json
+```cpp
+if (usuario.ativo)
 {
-  "nome": "JLScript",
-  "versao": "3.2.0",
-  "ativo": true
+    executar();
 }
 ```
 
+Além disso, eu queria uma ferramenta que pudesse ser usada não apenas com JLScript.
+
+O mesmo formatter poderia trabalhar com:
+
+```text
+JLScript
+JavaScript
+TypeScript
+React
+C++
+Python
+HTML
+CSS
+JSON
+Markdown
+YAML
+XML
+SQL
+```
+
+A ideia foi crescendo até virar o que está aqui hoje.
+
 ---
 
-## Visual Studio Code
+# 🧩 Linguagens suportadas
 
-A extensão adiciona integração direta com o VS Code.
+| Linguagem | Extensões |
+|---|---|
+| 💜 JLScript | `.jls` |
+| 🟨 JavaScript | `.js` |
+| ⚛️ JSX | `.jsx` |
+| 🔷 TypeScript | `.ts` |
+| ⚛️ TSX | `.tsx` |
+| 🐍 Python | `.py` |
+| ⚙️ C++ | `.cpp`, `.cc`, `.cxx` |
+| 📦 C/C++ Headers | `.h`, `.hpp`, `.hh`, `.chh` |
+| 🌐 HTML | `.html`, `.htm` |
+| 🎨 CSS | `.css` |
+| 📋 JSON | `.json` |
+| 📝 JSONC | `.jsonc` |
+| 📖 Markdown | `.md`, `.markdown` |
+| ⚙️ YAML | `.yaml`, `.yml` |
+| 📰 XML | `.xml` |
+| 🗄️ SQL | `.sql` |
 
-### Atalhos
+---
 
-| Atalho | Ação |
-| --- | --- |
-| `Ctrl + Alt + F` | Formatar documento |
-| `Ctrl + K`, `Ctrl + F` | Formatar seleção |
+# ⚡ Atalhos
+
+Uma das ideias principais do formatter é não precisar ficar procurando botão.
+
+## Windows / Linux
+
+| Atalho | Função |
+|---|---|
+| `Ctrl + Alt + F` | Formatar arquivo atual |
+| `Ctrl + K`, `Ctrl + F` | Formatar somente a seleção |
 | `Ctrl + Alt + P` | Abrir preview antes/depois |
 | `Shift + Alt + F` | Format Document padrão do VS Code |
 
-No macOS:
+## macOS
 
-| Atalho | Ação |
-| --- | --- |
-| `Cmd + Option + F` | Formatar documento |
+| Atalho | Função |
+|---|---|
+| `Cmd + Option + F` | Formatar arquivo atual |
 | `Cmd + K`, `Cmd + F` | Formatar seleção |
-| `Cmd + Option + P` | Preview |
+| `Cmd + Option + P` | Preview antes/depois |
 
 ---
 
-## Comandos do VS Code
+# 🧠 Comandos disponíveis
 
-Abra a Command Palette:
+Abra:
 
 ```text
 Ctrl + Shift + P
 ```
 
-Os comandos disponíveis incluem:
+e procure por:
+
+```text
+JLScript Formatter
+```
+
+Você encontrará:
 
 ```text
 JLScript Formatter: Formatar documento
+
 JLScript Formatter: Formatar seleção
+
 JLScript Formatter: Formatar projeto inteiro
+
 JLScript Formatter: Preview antes/depois
+
 JLScript Formatter: Ativar/Desativar formatar ao salvar
+
 JLScript Formatter: Criar .jlsfmt.json
+
 JLScript Formatter: Criar .jlsfmtignore
 ```
 
 ---
 
-## CLI
+# 🔥 Antes e Depois
 
-Depois de instalar o formatter:
+Essa é a parte mais importante.
 
-```bash
-jlsfmt --version
-```
-
-Resultado:
-
-```text
-3.2.0
-```
-
-Formatar um arquivo:
-
-```bash
-jlsfmt app.js
-```
-
-Formatar um projeto inteiro:
-
-```bash
-jlsfmt .
-```
-
-Verificar sem modificar:
-
-```bash
-jlsfmt . --check
-```
-
-Desativar cache:
-
-```bash
-jlsfmt . --no-cache
-```
-
-Limpar cache:
-
-```bash
-jlsfmt . --clear-cache
-```
+O formatter precisa mostrar resultado, não fazer discurso bonito sobre indentação.
 
 ---
 
-## Preview
+<details open>
+<summary><strong>💜 JLScript</strong></summary>
 
-O JLScript Formatter possui preview antes/depois.
+<br>
+
+### Antes
+
+```jls
+import [#ui,#style]
+
+func soma(a,b)
+{
+va resultado=a+b
+retorne resultado
+}
+
+va usuario={
+nome:"Lucas",
+idade:20,
+ativo:true
+}
+
+se(usuario.ativo)
+{
+mostrar("Usuario ativo")
+}
+senao
+{
+mostrar("Usuario inativo")
+}
+
+para(va i=0;i<10;i++)
+{
+mostrar(i)
+}
+```
+
+### Depois
+
+```jls
+import [#ui, #style]
+
+func soma(a, b) {
+    va resultado = a + b
+    retorne resultado
+}
+
+va usuario = {
+    nome: "Lucas",
+    idade: 20,
+    ativo: true
+}
+
+se (usuario.ativo) {
+    mostrar("Usuario ativo")
+} senao {
+    mostrar("Usuario inativo")
+}
+
+para (va i = 0; i < 10; i++) {
+    mostrar(i)
+}
+```
+
+Esse é o principal objetivo do projeto.
+
+O código continua sendo JLScript.
+
+Só deixa de parecer que foi escrito durante uma fuga policial.
+
+</details>
+
+---
+
+<details>
+<summary><strong>🟨 JavaScript</strong></summary>
+
+<br>
+
+### Antes
+
+```js
+function somar(a,b)
+{
+const resultado=a+b;
+return resultado;
+}
+
+const usuario={nome:"Lucas",idade:20,ativo:true};
+
+if(usuario.ativo)
+{
+console.log("Ativo");
+}
+```
+
+### Depois
+
+```js
+function somar(a, b) {
+  const resultado = a + b;
+  return resultado;
+}
+
+const usuario = {
+  nome: "Lucas",
+  idade: 20,
+  ativo: true
+};
+
+if (usuario.ativo) {
+  console.log("Ativo");
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>⚛️ JSX</strong></summary>
+
+<br>
+
+### Antes
+
+```jsx
+function App()
+{
+const nome="JLScript";
+
+return <div className="app"><h1>{nome}</h1><button onClick={()=>{console.log("clicou");}}>Clique</button></div>;
+}
+```
+
+### Depois
+
+```jsx
+function App() {
+  const nome = "JLScript";
+
+  return (
+    <div className="app">
+      <h1>{nome}</h1>
+      <button
+        onClick={() => {
+          console.log("clicou");
+        }}
+      >
+        Clique
+      </button>
+    </div>
+  );
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>🔷 TypeScript</strong></summary>
+
+<br>
+
+### Antes
+
+```ts
+interface Usuario
+{
+nome:string;
+idade:number;
+ativo:boolean;
+}
+
+function criarUsuario(nome:string,idade:number):Usuario
+{
+return {nome:nome,idade:idade,ativo:true};
+}
+```
+
+### Depois
+
+```ts
+interface Usuario {
+  nome: string;
+  idade: number;
+  ativo: boolean;
+}
+
+function criarUsuario(nome: string, idade: number): Usuario {
+  return {
+    nome: nome,
+    idade: idade,
+    ativo: true
+  };
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>⚛️ TSX</strong></summary>
+
+<br>
+
+### Antes
+
+```tsx
+type Props={
+titulo:string;
+ativo:boolean;
+};
+
+function Card({titulo,ativo}:Props)
+{
+return <div><h2>{titulo}</h2>{ativo&&<span>Ativo</span>}</div>;
+}
+```
+
+### Depois
+
+```tsx
+type Props = {
+  titulo: string;
+  ativo: boolean;
+};
+
+function Card({ titulo, ativo }: Props) {
+  return (
+    <div>
+      <h2>{titulo}</h2>
+      {ativo && <span>Ativo</span>}
+    </div>
+  );
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>🐍 Python</strong></summary>
+
+<br>
+
+### Antes
+
+```python
+def somar(a,b):
+ resultado=a+b
+ return resultado
+
+def usuario(nome,idade):
+ return {"nome":nome,"idade":idade,"ativo":True}
+```
+
+### Depois
+
+```python
+def somar(a, b):
+    resultado = a + b
+    return resultado
+
+
+def usuario(nome, idade):
+    return {
+        "nome": nome,
+        "idade": idade,
+        "ativo": True
+    }
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>⚙️ C++</strong></summary>
+
+<br>
+
+### Antes
+
+```cpp
+#include <iostream>
+
+int somar(int a,int b)
+{
+return a+b;
+}
+
+int main()
+{
+if(somar(10,20)>20)
+{
+std::cout<<"OK"<<std::endl;
+}
+
+return 0;
+}
+```
+
+### Depois
+
+```cpp
+#include <iostream>
+
+int somar(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    if (somar(10, 20) > 20) {
+        std::cout << "OK" << std::endl;
+    }
+
+    return 0;
+}
+```
+
+Repara novamente na regra:
+
+```cpp
+int main() {
+```
+
+e não:
+
+```cpp
+int main()
+{
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>📦 Headers C++</strong></summary>
+
+<br>
+
+### Antes
+
+```cpp
+class Calculadora
+{
+public:
+int somar(int a,int b)
+{
+return a+b;
+}
+};
+```
+
+### Depois
+
+```cpp
+class Calculadora {
+public:
+    int somar(int a, int b) {
+        return a + b;
+    }
+};
+```
+
+Suporte para:
+
+```text
+.h
+.hpp
+.hh
+.chh
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>🌐 HTML</strong></summary>
+
+<br>
+
+### Antes
+
+```html
+<html>
+<body>
+<div class="container">
+<h1>JLScript Formatter</h1>
+<p>Formatter multi-linguagem</p>
+<button>Formatar</button>
+</div>
+</body>
+</html>
+```
+
+### Depois
+
+```html
+<html>
+  <body>
+    <div class="container">
+      <h1>JLScript Formatter</h1>
+      <p>Formatter multi-linguagem</p>
+      <button>Formatar</button>
+    </div>
+  </body>
+</html>
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>🎨 CSS</strong></summary>
+
+<br>
+
+### Antes
+
+```css
+.container
+{
+display:flex;
+flex-direction:column;
+padding:20px;
+background:#11101a;
+}
+
+button
+{
+background:#7c3aed;
+color:white;
+}
+```
+
+### Depois
+
+```css
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #11101a;
+}
+
+button {
+  background: #7c3aed;
+  color: white;
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>📋 JSON</strong></summary>
+
+<br>
+
+### Antes
+
+```json
+{"nome":"JLScript Formatter","versao":"3.2.0","ativo":true,"linguagens":["jls","js","ts"]}
+```
+
+### Depois
+
+```json
+{
+  "nome": "JLScript Formatter",
+  "versao": "3.2.0",
+  "ativo": true,
+  "linguagens": [
+    "jls",
+    "js",
+    "ts"
+  ]
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>📝 JSONC</strong></summary>
+
+<br>
+
+### Antes
+
+```jsonc
+{
+"nome":"JLScript Formatter",
+// versão atual
+"versao":"3.2.0",
+"ativo":true
+}
+```
+
+### Depois
+
+```jsonc
+{
+  "nome": "JLScript Formatter",
+  // versão atual
+  "versao": "3.2.0",
+  "ativo": true
+}
+```
+
+Comentários continuam existindo.
+
+Porque apagar comentário de JSONC durante uma formatação seria uma forma bastante criativa de ser odiado.
+
+</details>
+
+---
+
+<details>
+<summary><strong>📖 Markdown</strong></summary>
+
+<br>
+
+### Antes
+
+```md
+#JLScript Formatter
+
+
+Formatter oficial.
+
+
+##Recursos
+
+-Formatar
+-Preview
+-Configuração
+```
+
+### Depois
+
+```md
+# JLScript Formatter
+
+Formatter oficial.
+
+## Recursos
+
+- Formatar
+- Preview
+- Configuração
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>⚙️ YAML</strong></summary>
+
+<br>
+
+### Antes
+
+```yaml
+nome:    JLScript Formatter
+versao:  3.2.0
+ativo: true
+```
+
+### Depois
+
+```yaml
+nome: JLScript Formatter
+versao: 3.2.0
+ativo: true
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>📰 XML</strong></summary>
+
+<br>
+
+### Antes
+
+```xml
+<projeto>
+<nome>JLScript</nome>
+<versao>3.2.0</versao>
+<config>
+<ativo>true</ativo>
+</config>
+</projeto>
+```
+
+### Depois
+
+```xml
+<projeto>
+  <nome>JLScript</nome>
+  <versao>3.2.0</versao>
+  <config>
+    <ativo>true</ativo>
+  </config>
+</projeto>
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>🗄️ SQL</strong></summary>
+
+<br>
+
+### Antes
+
+```sql
+select id,nome,email from usuarios where ativo=true and idade>=18 order by nome asc;
+```
+
+### Depois
+
+```sql
+SELECT id,
+  nome,
+  email
+FROM usuarios
+WHERE ativo = true
+  AND idade >= 18
+ORDER BY nome ASC;
+```
+
+</details>
+
+---
+
+# 👀 Preview antes de alterar
+
+Não quer formatar direto?
 
 Use:
 
@@ -247,19 +959,19 @@ Use:
 Ctrl + Alt + P
 ```
 
-O VS Code abre uma comparação entre:
+O formatter abre uma visualização comparando:
 
 ```text
 ORIGINAL  ↔  FORMATADO
 ```
 
-O arquivo original não é modificado durante o preview.
+Assim dá para conferir antes de aplicar.
 
 ---
 
-## Format on Save
+# 💾 Format on Save
 
-O formatter pode executar automaticamente ao salvar.
+Também é possível formatar automaticamente ao salvar.
 
 No VS Code:
 
@@ -267,25 +979,28 @@ No VS Code:
 Ctrl + Shift + P
 ```
 
-Execute:
+Procure:
 
 ```text
 JLScript Formatter: Ativar/Desativar formatar ao salvar
 ```
 
-Ou configure manualmente:
+Ou configure:
 
 ```json
 {
-  "jlsFormatter.formatOnSave": true
+  "editor.formatOnSave": true,
+  "jlsFormatter.enable": true
 }
 ```
 
 ---
 
-## Configuração
+# ⚙️ Configuração
 
-Crie na raiz do projeto:
+O formatter pode funcionar sem nenhuma configuração.
+
+Mas caso você queira mudar o comportamento, crie:
 
 ```text
 .jlsfmt.json
@@ -296,9 +1011,9 @@ Exemplo:
 ```json
 {
   "printWidth": 100,
-  "quotes": "single",
+  "quotes": "preserve",
   "semicolons": true,
-  "trailingComma": "multiline",
+  "trailingComma": "none",
   "bracketSpacing": true,
   "organizeImports": false,
   "cache": true,
@@ -331,11 +1046,112 @@ Exemplo:
 }
 ```
 
-O formatter procura a configuração do projeto subindo a árvore de diretórios.
+---
+
+<details>
+<summary><strong>🎛️ Ver opções disponíveis</strong></summary>
+
+<br>
+
+### `printWidth`
+
+Largura preferida:
+
+```json
+{
+  "printWidth": 100
+}
+```
 
 ---
 
-## Arquivos ignorados
+### `quotes`
+
+```json
+{
+  "quotes": "single"
+}
+```
+
+Valores:
+
+```text
+preserve
+single
+double
+```
+
+---
+
+### `semicolons`
+
+```json
+{
+  "semicolons": true
+}
+```
+
+---
+
+### `trailingComma`
+
+```json
+{
+  "trailingComma": "multiline"
+}
+```
+
+Valores:
+
+```text
+none
+multiline
+all
+```
+
+---
+
+### `bracketSpacing`
+
+```json
+{
+  "bracketSpacing": true
+}
+```
+
+Resultado:
+
+```js
+const usuario = { nome: "Lucas" };
+```
+
+---
+
+### `organizeImports`
+
+```json
+{
+  "organizeImports": true
+}
+```
+
+Por padrão:
+
+```json
+{
+  "organizeImports": false
+}
+```
+
+porque ordenar imports já é uma alteração um pouco maior que simples espaçamento.
+
+</details>
+
+---
+
+# 🚫 `.jlsfmtignore`
+
+Nem tudo precisa ser formatado.
 
 Crie:
 
@@ -356,107 +1172,35 @@ vendor/
 *.min.css
 ```
 
-O formatter também evita automaticamente algumas pastas conhecidas de build, cache e dependências.
-
----
-
-## Opções
-
-### `printWidth`
-
-Define a largura preferida das linhas.
-
-```json
-{
-  "printWidth": 100
-}
-```
-
-### `quotes`
-
-Controla as aspas utilizadas em JavaScript, JSX, TypeScript e TSX.
-
-```json
-{
-  "quotes": "single"
-}
-```
-
-Valores:
-
-```text
-preserve
-single
-double
-```
-
-### `semicolons`
-
-```json
-{
-  "semicolons": true
-}
-```
-
-### `trailingComma`
-
-```json
-{
-  "trailingComma": "multiline"
-}
-```
-
-Valores:
-
-```text
-none
-multiline
-all
-```
-
-### `bracketSpacing`
-
-Com:
-
-```json
-{
-  "bracketSpacing": true
-}
-```
-
-o formatter pode gerar:
-
-```js
-const usuario = { nome: "Lucas" };
-```
-
-### `organizeImports`
-
-```json
-{
-  "organizeImports": true
-}
-```
-
-A organização de imports é opcional porque altera mais do que apenas espaçamento visual.
-
----
-
-## Cache
-
-Arquivos que não foram modificados podem ser ignorados em execuções posteriores.
+Assim:
 
 ```bash
 jlsfmt .
 ```
 
-Para ignorar o cache temporariamente:
+não sai entrando em milhares de arquivos que ninguém pediu para tocar.
+
+---
+
+# ⚡ Cache
+
+Arquivos que não foram modificados não precisam ser processados novamente.
+
+O formatter possui cache para reduzir trabalho repetido.
+
+Executar normalmente:
+
+```bash
+jlsfmt .
+```
+
+Desativar cache:
 
 ```bash
 jlsfmt . --no-cache
 ```
 
-Para limpar:
+Limpar cache:
 
 ```bash
 jlsfmt . --clear-cache
@@ -464,50 +1208,105 @@ jlsfmt . --clear-cache
 
 ---
 
-## Check e diff
+# 💻 CLI
 
-O comando:
+O formatter não depende do VS Code.
+
+Ele também possui CLI:
+
+```bash
+jlsfmt
+```
+
+Ver versão:
+
+```bash
+jlsfmt --version
+```
+
+Formatar um arquivo:
+
+```bash
+jlsfmt app.js
+```
+
+JLScript:
+
+```bash
+jlsfmt main.jls
+```
+
+C++:
+
+```bash
+jlsfmt main.cpp
+```
+
+JSON:
+
+```bash
+jlsfmt package.json
+```
+
+Projeto inteiro:
+
+```bash
+jlsfmt .
+```
+
+---
+
+# ✅ Check
+
+Quer saber se os arquivos estão formatados sem modificar nada?
 
 ```bash
 jlsfmt . --check
 ```
 
-não modifica os arquivos.
-
-Quando encontra um arquivo fora do padrão, o formatter pode mostrar diferenças semelhantes a:
+O formatter pode mostrar diferenças:
 
 ```diff
--function teste()
+-function somar(a,b)
 -{
-+function teste() {
-   return true;
+-return a+b;
++function somar(a, b) {
++  return a + b;
  }
 ```
 
-Isso permite utilizar o formatter em CI, testes e pipelines de validação.
+Isso também abre espaço para uso em:
+
+```text
+GitHub Actions
+CI
+pipelines
+pré-commit
+testes
+```
 
 ---
 
-## Formatação por seleção
+# 🎯 Formatação de seleção
 
-O JLScript Formatter suporta formatação de apenas uma parte do arquivo.
+Nem sempre você quer mexer no arquivo inteiro.
 
-Selecione o trecho desejado e pressione:
+Selecione apenas uma parte:
 
 ```text
 Ctrl + K
 Ctrl + F
 ```
 
-Somente o intervalo selecionado é formatado.
+O formatter trabalha somente naquela seleção.
 
 ---
 
-## Plugins
+# 🧩 Plugins
 
-O formatter possui uma API básica para adicionar novas linguagens sem modificar o núcleo.
+O JLScript Formatter também foi pensado para crescer sem colocar todas as linguagens possíveis dentro do núcleo.
 
-Exemplo:
+Um plugin pode registrar novas extensões:
 
 ```js
 module.exports = {
@@ -519,7 +1318,7 @@ module.exports = {
 };
 ```
 
-Depois registre o plugin:
+Depois:
 
 ```json
 {
@@ -529,7 +1328,7 @@ Depois registre o plugin:
 }
 ```
 
-Isso abre espaço para extensões futuras como:
+Isso abre espaço para coisas como:
 
 ```text
 jlsfmt-plugin-lua
@@ -539,34 +1338,31 @@ jlsfmt-plugin-java
 
 ---
 
-## Integração com outros editores
+# 🌍 Mais do que VS Code
 
-O formatter oferece entrada e saída por `stdin/stdout`.
+O formatter possui suporte a entrada e saída que permite integração com outros editores.
 
-Isso permite integração futura com:
-
-```text
-Visual Studio
-Neovim
-Sublime Text
-Zed
-JetBrains IDEs
-outros editores
-```
-
-A ideia é manter um único motor de formatação.
+A ideia é simples:
 
 ```text
-VS Code ──────────┐
-Visual Studio ────┤
-Neovim ───────────┼── JLScript Formatter
-Sublime ──────────┤
-Zed ──────────────┘
+                   JLScript Formatter
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+       VS Code       Visual Studio       Neovim
+          │                │                │
+          ▼                ▼                ▼
+       Sublime            Zed           JetBrains
 ```
+
+O motor continua sendo o mesmo.
+
+O que muda é apenas a integração com cada editor.
 
 ---
 
-## Arquitetura
+# 🏗️ Arquitetura
 
 ```text
 JLScript Formatter
@@ -574,15 +1370,15 @@ JLScript Formatter
 ├── Core
 │   ├── detector de linguagem
 │   ├── formatter
-│   ├── config
-│   ├── ignore
+│   ├── configuração
 │   ├── cache
+│   ├── ignore
 │   └── plugins
 │
 ├── CLI
 │   └── jlsfmt
 │
-└── VS Code
+└── VS Code Extension
     ├── Format Document
     ├── Format Selection
     ├── Format Workspace
@@ -592,43 +1388,244 @@ JLScript Formatter
 
 ---
 
-## Filosofia
+# 🧪 Princípios do formatter
 
-O formatter segue alguns princípios simples:
+O projeto segue algumas regras que considero importantes:
 
-- código previsível;
-- configuração pequena;
-- resultado idempotente;
-- não alterar a lógica do programa;
-- preservar strings e comentários;
-- evitar transformações agressivas;
-- permitir regras diferentes por linguagem;
-- manter `{` na mesma linha da declaração;
-- funcionar fora do VS Code.
+```text
+✓ resultado previsível
 
-Formatar novamente um arquivo já formatado deve produzir exatamente o mesmo resultado.
+✓ não modificar a lógica do programa
+
+✓ preservar strings
+
+✓ preservar comentários
+
+✓ evitar transformações agressivas
+
+✓ permitir configuração por linguagem
+
+✓ manter comportamento consistente
+
+✓ formatar novamente sem mudar o resultado
+
+✓ chave de abertura na mesma linha
+```
+
+Essa última merece repetir.
+
+Sim:
+
+```js
+function executar() {
+}
+```
+
+Não:
+
+```js
+function executar()
+{
+}
+```
+
+Tem coisas que simplesmente não deveriam precisar de discussão.
 
 ---
 
-## JLScript
+# ♻️ Idempotência
 
-O JLScript Formatter faz parte do ecossistema **JLScript**, uma linguagem de programação e conjunto de ferramentas voltados para uma experiência de desenvolvimento simples e integrada.
-
-Outros componentes do ecossistema incluem:
+Uma regra importante de qualquer formatter:
 
 ```text
-JLScript Core
-JLShell
+Código original
+      ↓
+Formatter
+      ↓
+Código formatado
+      ↓
+Formatter novamente
+      ↓
+MESMO código
+```
+
+Formatar um arquivo duas vezes não deveria continuar alterando ele.
+
+O formatter tenta manter esse comportamento nas linguagens suportadas.
+
+---
+
+# 🛡️ Transformações conservadoras
+
+Algumas linguagens são mais delicadas que outras.
+
+Por isso o formatter tenta ser mais conservador onde uma transformação agressiva poderia alterar comportamento ou estrutura.
+
+Especialmente em formatos como:
+
+```text
+Markdown
+YAML
+XML
+SQL
+JSONC
+```
+
+Melhor deixar uma linha menos bonita do que transformar um arquivo válido em decoração de parede.
+
+---
+
+# 💜 Ecossistema JLScript
+
+O Formatter não é um projeto isolado.
+
+Ele faz parte de uma ideia maior.
+
+```text
+JLScript
+│
+├── JLScript Core
+│
+├── JLS CLI
+│
+├── JLShell
+│
+├── JLScript Formatter
+│
+├── JLScript Language Server
+│
+├── VS Code Extension
+│
+├── Visual Studio Extension
+│
+└── JLS AI
+```
+
+O objetivo é cada ferramenta ter sua própria responsabilidade.
+
+O runtime executa.
+
+O formatter formata.
+
+O Language Server entende o código dentro dos editores.
+
+As extensões fazem a integração.
+
+E todas continuam fazendo parte do mesmo ecossistema.
+
+---
+
+# 📦 Instalação
+
+## VS Code Marketplace
+
+Abra:
+
+```text
+Ctrl + Shift + X
+```
+
+Pesquise:
+
+```text
 JLScript Formatter
-JLScript Language Server
-JLScript VS Code Extension
-JLScript Visual Studio Extension
-JLS AI
+```
+
+ou acesse:
+
+[JLScript Formatter no Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EohLczin.jlscript-formatter)
+
+---
+
+## Instalação por VSIX
+
+Também é possível instalar manualmente:
+
+```text
+Ctrl + Shift + P
+```
+
+depois:
+
+```text
+Extensions: Install from VSIX...
+```
+
+Escolha:
+
+```text
+jlscript-formatter-x.x.x.vsix
 ```
 
 ---
 
-## Versão
+# 📂 Repositório
+
+GitHub:
+
+[github.com/eohlczinn/JLScript-formatter](https://github.com/eohlczinn/JLScript-formatter)
+
+---
+
+# 🗺️ Próximos passos
+
+Algumas ideias para as próximas versões:
+
+```text
+□ melhorar formatação de SQL
+
+□ aprofundar suporte a Markdown
+
+□ melhorar YAML
+
+□ ampliar suporte JSX/TSX
+
+□ integração com Visual Studio
+
+□ integração com Neovim
+
+□ integração com Sublime
+
+□ plugins adicionais
+
+□ melhorar performance em projetos grandes
+
+□ novos modos de preview
+
+□ integração maior com JLScript
+```
+
+---
+
+# ⭐ Contribuindo
+
+Encontrou código que o formatter tratou errado?
+
+Uma das melhores formas de ajudar é criar uma Issue mostrando:
+
+### Entrada
+
+```text
+código antes
+```
+
+### Resultado atual
+
+```text
+resultado produzido
+```
+
+### Resultado esperado
+
+```text
+como deveria ficar
+```
+
+Isso deixa o problema reproduzível e muito mais simples de corrigir.
+
+---
+
+# 📜 Versão atual
 
 ```text
 JLScript Formatter v3.2.0
@@ -636,13 +1633,26 @@ JLScript Formatter v3.2.0
 
 ---
 
-## Autor
+# 👨‍💻 Projeto
 
-Desenvolvido como parte do projeto **JLScript / JLScripter**.
+Criado como parte do ecossistema **JLScript / JLScripter**.
+
+Desenvolvido por **Lucas**.
 
 ---
 
 <p align="center">
-  <strong>JLScript Formatter</strong><br>
-  Código organizado. Mesma regra. Qualquer editor.
+  <img src="./assets/icon.png" width="80" alt="JLScript Formatter">
+</p>
+
+<h3 align="center">JLScript Formatter</h3>
+
+<p align="center">
+  <strong>Seu código. Suas regras. Menos tempo arrumando espaço.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/eohlczinn/JLScript-formatter">GitHub</a>
+  ·
+  <a href="https://marketplace.visualstudio.com/items?itemName=EohLczin.jlscript-formatter">Marketplace</a>
 </p>
